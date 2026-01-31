@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-primary: rgba(255, 255, 255, 0.95);
+    --color-text-secondary: rgba(255, 255, 255, 0.70);
+    --color-text-muted: rgba(255, 255, 255, 0.50);
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-hover: rgba(255, 255, 255, 0.15);
+  }
+
+  body {
+    @apply bg-surface-base text-white antialiased selection:bg-accent-primary/30 selection:text-white;
+    /* Clean background as per minimalism philosophy */
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-stroke rounded-full hover:bg-surface-hover;
+  }
+}
+
+@layer components {
+
+  /* Holographic Glass Card (Docs/Desgin.md) */
+  .card-holographic {
+    @apply bg-card-holographic border border-[rgba(255, 255, 255, 0.08)] rounded-2xl shadow-card-holographic backdrop-blur-[12px];
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s;
+  }
+
+  .card-holographic:hover {
+    @apply border-[rgba(255, 255, 255, 0.15)];
+  }
+
+  /* Semantic Text Utilities (if needed directly) */
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+}
