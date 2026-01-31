@@ -20,11 +20,10 @@ import { useStake } from '@/hooks/useWanderify'
 interface StakeModalProps {
     destinationId: number
     destinationName: string
-    poolBalance?: string
     trigger?: React.ReactNode
 }
 
-export function StakeModal({ destinationId, destinationName, poolBalance, trigger }: StakeModalProps) {
+export function StakeModal({ destinationId, destinationName, trigger }: StakeModalProps) {
     const { isConnected } = useAccount()
     const { stake, isPending, isConfirming, isConfirmed } = useStake()
 

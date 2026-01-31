@@ -28,7 +28,6 @@ export function Globe() {
         const phi = Math.PI * (3 - Math.sqrt(5))
         for (let i = 0; i < DOT_COUNT; i++) {
             const y = 1 - (i / (DOT_COUNT - 1)) * 2
-            const radius = Math.sqrt(1 - y * y)
             const theta = phi * i
             dots.push({ theta, phi: Math.acos(y) })
         }

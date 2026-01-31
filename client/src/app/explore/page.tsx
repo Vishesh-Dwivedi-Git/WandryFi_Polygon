@@ -136,7 +136,6 @@ export default function ExplorePage() {
                                     <StakeModal
                                         destinationId={dest.id}
                                         destinationName={dest.name}
-                                        poolBalance={formatPool(dest.poolBalance)}
                                     />
                                 </CardContent>
                             </Card>

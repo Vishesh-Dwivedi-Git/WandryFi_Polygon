@@ -4,7 +4,7 @@ import { WANDRYFI_ADDRESS } from '@/lib/wagmi'
 import WandryFiJson from '@/lib/abi/WandryFi.json'
 
 // Extract the ABI from the JSON
-const WandryFiABI = WandryFiJson.abi as const
+const WandryFiABI = WandryFiJson.abi
 
 export function useStake() {
     const { data: hash, writeContract, isPending, error } = useWriteContract()

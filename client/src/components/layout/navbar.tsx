@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { MapPin, LayoutDashboard, Trophy, Menu, X, Globe, ChevronRight } from 'lucide-react'
+import { MapPin, LayoutDashboard, Trophy, Menu, X, ChevronRight } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
@@ -47,7 +47,7 @@ export function Navbar() {
 
                 {/* Desktop Navigation - Centered */}
                 <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
-                    {navLinks.map(({ href, label, icon: Icon }) => {
+                    {navLinks.map(({ href, label }) => {
                         const isActive = pathname === href
                         return (
                             <Link
